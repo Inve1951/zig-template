@@ -1,0 +1,32 @@
+// vscode does not load this file.
+// For an optimal development experience copy this file to your machine-local snippets folder.
+// Typically located at `~/.config/Code/User/snippets/zig.json`.
+// Install the `Gruntfuggly.auto-snippet` vscode extension and configure it. See `../settings.json`.
+{
+	// These *snippets* are for use with 'Auto Snippet' extension which pre-fills newly created files, hence they don't have a prefix.
+	// Docs: https://code.visualstudio.com/docs/editor/userdefinedsnippets#_transform-examples
+	"Zig file template": {
+		"prefix": "",
+		"description": "Needed in most zig files",
+		"body": [
+			"${1://! $2.\n\n}const std = @import(\"std\");",
+			"${3:const utils = @import(\"utils.zig\");\n}",
+			// snake_case -> CamelCase conversion.
+			"pub const ${4:${TM_FILENAME_BASE/(?:_+|^)([a-z\\d])/${1:/upcase}/gi}} = struct {",
+			"\t$0",
+			"};",
+			""
+		]
+	},
+	"Zig top-level struct file template": {
+		"prefix": "",
+		"description": "Needed in most zig files",
+		"body": [
+			"${1://! $2.\n\n}const std = @import(\"std\");",
+			"${3:const utils = @import(\"utils.zig\");\n}",
+			"const $TM_FILENAME_BASE = @This();",
+			"",
+			"$0"
+		]
+	}
+}

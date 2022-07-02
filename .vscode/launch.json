@@ -1,0 +1,88 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "debug",
+      "type": "cppdbg",
+      // "windows": {
+      //   "type": "cppvsdbg"
+      // },
+      "request": "launch",
+      "program": "${workspaceFolder}/zig-out/bin/${workspaceFolderBasename}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build",
+    },
+    {
+      "name": "debug tests",
+      "type": "cppdbg",
+      // "windows": {
+      //   "type": "cppvsdbg"
+      // },
+      "request": "launch",
+      "program": "${workspaceFolder}/zig-out/bin/test",
+      "args": [
+        "zig"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build tests",
+    },
+    {
+      // Suboptimal! Doesn't use build.zig!
+      "name": "debug tests - current file",
+      "type": "cppdbg",
+      // "windows": {
+      //   "type": "cppvsdbg"
+      // },
+      "request": "launch",
+      "program": "${workspaceFolder}/${input:test-bin-single}/test",
+      "args": [
+        "zig"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+    }
+  ],
+  "inputs": [
+    {
+      // Builds a test executable for the currently focused file and returns it's file system path.
+      "id": "test-bin-single",
+      "type": "command",
+      "command": "shellCommand.execute",
+      "args": {
+        "command": "zig test ${file} --enable-cache --test-no-exec --cache-dir zig-cache -O Debug",
+        "cwd": "${workspaceFolder}",
+        "useSingleResult": true
+      }
+    }
+  ]
+}

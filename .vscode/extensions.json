@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "sanaajani.taskrunnercode", // Adds a panel to vscode's GUI letting you execute build/run tasks from it.
+        "tiehuis.zig", // Basic zig support and auto-formatting (zig fmt).
+        "augusterame.zls-vscode", // zls glue
+        "augustocdias.tasks-shell-input" // Needed by the debugger "launch configuration" for debugging the focused file's tests.
+    ]
+}

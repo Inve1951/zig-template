@@ -1,0 +1,18 @@
+// vscode does not load this file.
+// For an optimal development experience copy these to your machine-local IDE settings.
+// Typically located at `~/.config/Code/User/settings.json`. Also see `snippets/zig.json`
+{
+    "autoSnippet.snippets": [
+        {
+            // Upper-case filename.
+            "regex": ".*/[A-Z][^/]*\\.zig",
+            "snippet": "Zig top-level struct file template"
+        },
+        {
+            "regex": ".*\\.zig",
+            "snippet": "Zig file template"
+        }
+    ],
+    "debug.allowBreakpointsEverywhere": true,
+    "zigLanguageClient.path": "zls" // without this, zls isn't detected on $PATH (probably a bug)
+}

@@ -1,0 +1,12 @@
+{
+    "files.insertFinalNewline": true,
+    "[zig]": {
+        "editor.defaultFormatter": "tiehuis.zig",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file"
+    },
+    "files.exclude": {
+        "zig-cache/": true,
+        "zig-out/": true
+    }
+}
