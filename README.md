@@ -1,5 +1,5 @@
 
-# Zig project template - v1
+# Zig project template - v1.1
 
 Base setup for zig projects with IDE glue.
 
@@ -28,7 +28,7 @@ To make use of the included templates do the follow:
 
 - install vscode extension `Gruntfuggly.auto-snippet`
 
-- apply machine-local settings (see `.vscode/user/settings.json`) (also *needed* for `zls` and debugging)
+- apply machine-local settings (see `.vscode/user/settings.json`) (also needed for format-on-safe and breakpoints)
 
 - install the templates (see `.vscode/user/snippets/zig.json`)
 
@@ -45,7 +45,7 @@ The *debug current file's tests* launch configuration does not use `build.zig`.
 
 Tested on Linux;
 *should* work on Mac OS;
-Windows users please try the commented-out bits of `.vscode/launch.json` and let me know if it works.
+*should* work on Windows.
 
 `zls` is expected to be on $PATH. Same goes for `zig`.
 

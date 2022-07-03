@@ -4,9 +4,9 @@
     {
       "name": "debug",
       "type": "cppdbg",
-      // "windows": {
-      //   "type": "cppvsdbg"
-      // },
+      "windows": {
+        "type": "cppvsdbg"
+      },
       "request": "launch",
       "program": "${workspaceFolder}/zig-out/bin/${workspaceFolderBasename}",
       "args": [],
@@ -26,9 +26,9 @@
     {
       "name": "debug tests",
       "type": "cppdbg",
-      // "windows": {
-      //   "type": "cppvsdbg"
-      // },
+      "windows": {
+        "type": "cppvsdbg"
+      },
       "request": "launch",
       "program": "${workspaceFolder}/zig-out/bin/test",
       "args": [
@@ -51,9 +51,9 @@
       // Suboptimal! Doesn't use build.zig!
       "name": "debug tests - current file",
       "type": "cppdbg",
-      // "windows": {
-      //   "type": "cppvsdbg"
-      // },
+      "windows": {
+        "type": "cppvsdbg"
+      },
       "request": "launch",
       "program": "${workspaceFolder}/${input:test-bin-single}/test",
       "args": [
