@@ -10,7 +10,7 @@
 		"description": "Needed in most zig files",
 		"body": [
 			"${1://! $2.\n\n}const std = @import(\"std\");",
-			"${3:const utils = @import(\"utils.zig\");\n}",
+			"${3:const assert = std.debug.assert;\nconst utils = @import(\"utils.zig\");\n}",
 			// snake_case -> CamelCase conversion.
 			"pub const ${4:${TM_FILENAME_BASE/(?:_+|^)([a-z\\d])/${1:/upcase}/gi}} = struct {",
 			"\t$0",
@@ -23,7 +23,7 @@
 		"description": "Needed in most zig files",
 		"body": [
 			"${1://! $2.\n\n}const std = @import(\"std\");",
-			"${3:const utils = @import(\"utils.zig\");\n}",
+			"${3:const assert = std.debug.assert;\nconst utils = @import(\"utils.zig\");\n}",
 			"const $TM_FILENAME_BASE = @This();",
 			"",
 			"$0"
